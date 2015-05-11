@@ -34,32 +34,35 @@
                 <p>Linkedin: {{linkedin}}</p>
               </div>
             </div>
-            <div class="edit">Edit</div>
+            <div class="edit" id="edit">Edit</div>
     	  </div>
       </script>
       <script type="x-handlebars-template" id="edit-header-template">
         <div class="cover-container">
+            <div class="cover">
+              <p>Cover Image url: </p><input type="text" value="{{cover}}" id="cover">
+            </div>
             <div class="avatar">
-              <p>Image url: </p><input type="text" value="{{avatar}}">
+              <p>Avatar Image url: </p><input type="text" value="{{avatar}}" id="avatar">
             </div>
             <div class="name">
-              <p>Name: </p><input type="text" value="{{name}}">
+              <p>Name: </p><input type="text" value="{{name}}" id="name">
             </div>
             <div class="bio">
-              <p>Bio: </p><input type="text" value="{{bio}}">
+              <p>Bio: </p><input type="text" value="{{bio}}" id="bio">
             </div>
             <div class="social">
               <div class="facebook">
-                <p>Facebook: </p><input type="text" value="{{facebook}}">
+                <p>Facebook: </p><input type="text" value="{{facebook}}" id="facebook">
               </div>
               <div class="twitter">
-                <p>Twitter: </p><input type="text" value="{{twitter}}">
+                <p>Twitter: </p><input type="text" value="{{twitter}}" id="twitter">
               </div>
               <div class="linkedin">
-                <p>Linkedin: </p><input type="text" value="{{linkedin}}">
+                <p>Linkedin: </p><input type="text" value="{{linkedin}}" id="linkedin">
               </div>
             </div>
-            <div class="save">Save</div>
+            <div class="save" id="save">Save</div>
         </div>
       </script>
     </div>
