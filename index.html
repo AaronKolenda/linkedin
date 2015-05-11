@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TodoRPG</title>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+		<script src="libs/jquery.js"></script>
+		<script src="libs/underscore.js"></script>
+		<script src="libs/handlebars.js"></script>
+		<script src="libs/backbone.js"></script>
+    <script src="index.js"></script>
+  </head>
+
+  <body>
+    <div id="header-container">
+      <script type="x-handlebars-template" id="header-template">
+       	<div class="cover-container">
+       	  	<div class="avatar">
+       	  		<img src={{avatar}}>
+       	  	</div>
+            <div class="name">
+              <p>{{name}}</p>
+            </div>
+            <div class="bio">
+              <p>{{bio}}</p>
+            </div>
+            <div class="social">
+              <div class="facebook">
+                <p>Facebook: {{facebook}}</p>
+              </div>
+              <div class="twitter">
+                <p>Twitter: {{twitter}}</p>
+              </div>
+              <div class="linkedin">
+                <p>Linkedin: {{linkedin}}</p>
+              </div>
+            </div>
+            <div class="edit">Edit</div>
+    	  </div>
+      </script>
+      <script type="x-handlebars-template" id="edit-header-template">
+        <div class="cover-container">
+            <div class="avatar">
+              <p>Image url: </p><input type="text" value="{{avatar}}">
+            </div>
+            <div class="name">
+              <p>Name: </p><input type="text" value="{{name}}">
+            </div>
+            <div class="bio">
+              <p>Bio: </p><input type="text" value="{{bio}}">
+            </div>
+            <div class="social">
+              <div class="facebook">
+                <p>Facebook: </p><input type="text" value="{{facebook}}">
+              </div>
+              <div class="twitter">
+                <p>Twitter: </p><input type="text" value="{{twitter}}">
+              </div>
+              <div class="linkedin">
+                <p>Linkedin: </p><input type="text" value="{{linkedin}}">
+              </div>
+            </div>
+            <div class="save">Save</div>
+        </div>
+      </script>
+    </div>
+  </body>
+</html>
