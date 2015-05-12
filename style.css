@@ -1,4 +1,21 @@
+.address-container {
+	border: 1px solid black;
+}
+
+.address-wrap {
+	border: 1px solid black;
+}
+
 .header-container {
-	height: 300px;
+	height: 350px;
 	background-repeat: no-repeat;
+	border: 1px solid black;
+}
+
+.work-container {
+	border: 1px solid black;
+}
+
+.work-wrap {
+	border: 1px solid black;
 }

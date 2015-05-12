@@ -27,7 +27,8 @@ var WorkModel = Backbone.Model.extend({
 var WorkView = Backbone.View.extend({
 
   events: { "click #edit": "edit",
-            "click #save": "save"},
+            "click #save": "save",
+            "click #cancel": "render"},
 
   className: "work-wrap",
 
@@ -42,9 +43,6 @@ var WorkView = Backbone.View.extend({
 
   edit: function(){
     this.$el.html(templates.editWorkInfo(this.model.viewDetails()));
-    /*$("#header-container").html("");
-    var editView = new EditWorkView(this.model);
-    $("#header-container").append(editView.$el);*/
   },
 
   save: function(){

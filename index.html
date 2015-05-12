@@ -9,6 +9,8 @@
 		<script src="libs/backbone.js"></script>
     <script src="header.js"></script>
     <script src="work.js"></script>
+    <script src="address.js"></script>
+    <script src="index.js"></script>
   </head>
 
   <body>
@@ -34,7 +36,7 @@
                 <p>Linkedin: {{linkedin}}</p>
               </div>
             </div>
-            <div class="edit" id="edit">Edit</div>
+            <button class="edit" id="edit">Edit</button>
       </script>
       <script type="x-handlebars-template" id="edit-header-template">
             <div class="cover">
@@ -60,7 +62,8 @@
                 <p>Linkedin: </p><input type="text" value="{{linkedin}}" id="linkedin">
               </div>
             </div>
-            <div class="save" id="save">Save</div>
+            <button class="save" id="save">Save</button>
+            <button class="cancel" id="cancel">Cancel</button>
       </script>
     </div>
 
@@ -83,7 +86,7 @@
                 <p>End Date: {{end}}</p>
               </div>
             </div>
-            <div class="edit" id="edit">Edit</div>
+            <button class="edit" id="edit">Edit</button>
       </script>
 
       <script type="x-handlebars-template" id="edit-work-template">
@@ -104,8 +107,56 @@
                 <p>End Date: </p><input type="text" value="{{end}}" id="end">
               </div>
             </div>
-            <div class="save" id="save">Save</div>
+            <button class="save" id="save">Save</button>
+            <button class="cancel" id="cancel">Cancel</button>
       </script>
       <button id="add-work">Add Job</button>
+    </div>
+
+    <div id="address-container" class="address-container">
+      <script type="x-handlebars-template" id="address-template">
+        <div class="street-wrap">
+          <div class="street-one">
+            Street Line One: <p>{{streetOne}}</p>
+          </div>
+          <div class="street-two">
+            Street Line Two: <p>{{streetTwo}}</p>
+          </div>
+        </div>
+        <div class="city">
+          City: <p>{{city}}</p>
+        </div>
+        <div class="state">
+          <p>State: {{state}}</p>
+        </div>
+        <div class="zip">
+          <p>Zip: {{zip}}</p>
+        </div>
+        <button class="edit" id="edit">Edit</button>
+      </script>
+
+      <script type="x-handlebars-template" id="edit-address-template">
+        <div class="street-wrap">
+          <div class="street-one">
+            Street Line One: <input type="text" value="{{streetOne}}" id="streetOne">
+          </div>
+          <div class="street-two">
+            Street Line Two: <input type="text" value="{{streetTwo}}" id="streetTwo">
+          </div>
+        </div>
+        <div class="city">
+          City: <input type="text" value="{{city}}" id="city">
+        </div>
+        <div class="state">
+          State: <input type="text" value="{{state}}" id="state">
+        </div>
+        <div class="zip">
+          Zip: <input type="text" value="{{zip}}" id="zip">
+        </div>
+          <button class="save" id="save">Save</button>
+          <button class="cancel" id="cancel">Cancel</button>
+      </script>
+      <button id="add-address">Add Address</button>
+    </div>
   </body>
 </html>
