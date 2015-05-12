@@ -26,6 +26,12 @@ var getTemplates = function(){
   var editCardString = $("#edit-card-template").text();
   templates.editCardInfo = Handlebars.compile(editCardString);
 
+  var phoneString = $("#phone-template").text();
+  templates.phoneInfo = Handlebars.compile(phoneString);
+
+  var editPhoneString = $("#edit-phone-template").text();
+  templates.editPhoneInfo = Handlebars.compile(editPhoneString);
+
 };
 
 $(document).on("ready", function(){
@@ -102,6 +108,29 @@ $(document).on("ready", function(){
     cardViews.push(newCardView);
     $("#card-container").append(newCardView.el);
     newCardView.edit();
+  })
+
+  // Display two phone numbers with default data
+  var phoneCollection = new PhoneCollection();
+  var phoneOne = new PhoneModel();
+  var phoneTwo = new PhoneModel();
+  phoneCollection.add([phoneOne, phoneTwo]);
+
+  _.each(phoneCollection.models, function(element, index){
+    phoneViews.push(new PhoneView(element));
+  });
+
+  _.each(phoneViews, function(element, index){
+    $("#phone-container").append(phoneViews[index].el);
+  });
+
+  $("#add-phone").click(function(){
+    var newPhone = new PhoneModel();
+    phoneCollection.add(newPhone);
+    var newPhoneView = new PhoneView(newPhone);
+    phoneViews.push(newPhoneView);
+    $("#phone-container").append(newPhoneView.el);
+    newPhoneView.edit();
   })
 
 });

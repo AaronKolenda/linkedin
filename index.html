@@ -11,6 +11,7 @@
     <script src="work.js"></script>
     <script src="address.js"></script>
     <script src="card.js"></script>
+    <script src="phone.js"></script>
     <script src="index.js"></script>
   </head>
 
@@ -194,6 +195,30 @@
           <button class="cancel" id="cancel">Cancel</button>
       </script>
       <button id="add-card">Add Credit Card</button>
+    </div>
+
+     <div id="phone-container" class="phone-container">
+      <script type="x-handlebars-template" id="phone-template">
+        <div class="number">
+          Number: <p>{{digitsOne}}-{{digitsTwo}}-{{digitsThree}}</p>
+        </div>
+        <div class="type">
+          Type: <p>{{type}}</p>
+        </div>
+        <button class="edit" id="edit">Edit</button>
+      </script>
+
+      <script type="x-handlebars-template" id="edit-phone-template">
+        <div class="number">
+          Number: <input type="text" value="{{digitsOne}}-{{digitsTwo}}-{{digitsThree}}" id="number">
+        </div>
+        <div class="type">
+          Type: <input type="text" value="{{type}}" id="type">
+        </div>
+          <button class="save" id="save">Save</button>
+          <button class="cancel" id="cancel">Cancel</button>
+      </script>
+      <button id="add-phone">Add Phone Number</button>
     </div>
   </body>
 </html>

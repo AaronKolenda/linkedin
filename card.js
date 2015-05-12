@@ -49,13 +49,9 @@ var CardView = Backbone.View.extend({
 
   save: function(){
     var digitsOne = ($("#number").val()).substring(0, 4);
-    console.log(digitsOne);
     var digitsTwo = ($("#number").val()).substring(5, 9);
-    console.log(digitsTwo);
     var digitsThree = ($("#number").val()).substring(10, 14);
-    console.log(digitsThree);
     var digitsFour = ($("#number").val()).substring(15, 19);
-    console.log(digitsFour);
     var date = $("#date").val();
     var code = $("#code").val();
     var zip = $("#zip").val();
