@@ -7,13 +7,13 @@
 		<script src="libs/underscore.js"></script>
 		<script src="libs/handlebars.js"></script>
 		<script src="libs/backbone.js"></script>
-    <script src="index.js"></script>
+    <script src="header.js"></script>
+    <script src="work.js"></script>
   </head>
 
   <body>
-    <div id="header-container">
-      <script type="x-handlebars-template" id="header-template">
-       	<div class="cover-container">
+    <div id="header-container" class="header-container">
+        <script type="x-handlebars-template" id="header-template">
        	  	<div class="avatar">
        	  		<img src={{avatar}}>
        	  	</div>
@@ -35,10 +35,8 @@
               </div>
             </div>
             <div class="edit" id="edit">Edit</div>
-    	  </div>
       </script>
       <script type="x-handlebars-template" id="edit-header-template">
-        <div class="cover-container">
             <div class="cover">
               <p>Cover Image url: </p><input type="text" value="{{cover}}" id="cover">
             </div>
@@ -63,8 +61,50 @@
               </div>
             </div>
             <div class="save" id="save">Save</div>
-        </div>
       </script>
     </div>
+
+    <div id="work-container" class="work-container">
+        <script type="x-handlebars-template" id="work-template">
+            <div class="name">
+              Company Name: <p>{{name}}</p>
+            </div>
+            <div class="title">
+              Title: <p>{{title}}</p>
+            </div>
+            <div class="description">
+              Description: <p>{{description}}</p>
+            </div>
+            <div class="duration">
+              <div class="start">
+                <p>Start Date: {{start}}</p>
+              </div>
+              <div class="end">
+                <p>End Date: {{end}}</p>
+              </div>
+            </div>
+            <div class="edit" id="edit">Edit</div>
+      </script>
+
+      <script type="x-handlebars-template" id="edit-work-template">
+            <div class="name">
+              <p>Name of Company: </p><input type="text" value="{{name}}" id="company-name">
+            </div>
+            <div class="title">
+              <p>Title: </p><input type="text" value="{{title}}" id="title">
+            </div>
+            <div class="description">
+              <p>Description: </p><input type="text" value="{{description}}" id="description">
+            </div>
+            <div class="duration">
+              <div class="start">
+                <p>Start Date: </p><input type="text" value="{{start}}" id="start">
+              </div>
+              <div class="end">
+                <p>End Date: </p><input type="text" value="{{end}}" id="end">
+              </div>
+            </div>
+            <div class="save" id="save">Save</div>
+      </script>
   </body>
 </html>

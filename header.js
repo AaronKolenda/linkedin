@@ -9,18 +9,18 @@ var getTemplates = function(){
   var editHeaderString = $("#edit-header-template").text();
   templates.editHeaderInfo = Handlebars.compile(editHeaderString);
 
-  /*var singleString = $("#single-task-template").text();
-  templates.singleInfo = Handlebars.compile(singleString);
+  var workString = $("#work-template").text();
+  templates.workInfo = Handlebars.compile(workString);
 
-  var statString = $("#stats-template").text();
-  templates.statInfo = Handlebars.compile(statString);*/
+  var editWorkString = $("#edit-work-template").text();
+  templates.editWorkInfo = Handlebars.compile(editWorkString);
 
   };
 
 var Header = Backbone.Model.extend({
 
   defaults: {
-  	cover: "",
+  	cover: "https://unsplash.imgix.net/uploads/14126758789351371c7ec/aa322c2d?fit=crop&fm=jpg&h=700&q=75&w=1050;",
     avatar: "http://png.findicons.com/files/icons/2198/dark_glass/128/emoticon.png",
     name: "nameex",
     bio: "bioex",
@@ -49,6 +49,8 @@ var HeaderView = Backbone.View.extend({
 
   render: function() {
     this.$el.html(templates.headerInfo(this.model.viewDetails()));
+    $(".header-container").css("background-image", "url(" + this.model.get("cover") + ")");
+    console.log(this.model.get("cover"));
   },
 
   edit: function(){
@@ -101,4 +103,20 @@ $(document).on("ready", function(){
   var defaultHeader = new Header;
   var defaultHeaderView = new HeaderView(defaultHeader);
   $("#header-container").append(defaultHeaderView.$el);
+
+  var workCollection = new WorkCollection();
+  var jobOne = new WorkModel();
+  var jobTwo = new WorkModel();
+  workCollection.add([jobOne, jobTwo]);
+
+  _.each(workCollection.models, function(element, index){
+    workViews.push(new WorkView(element));
+  });
+
+  _.each(workViews, function(element, index){
+    $("#work-container").append(workViews[index].el);
+  });
+
 });
+
+
