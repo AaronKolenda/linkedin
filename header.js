@@ -117,6 +117,15 @@ $(document).on("ready", function(){
     $("#work-container").append(workViews[index].el);
   });
 
+  $("#add-work").click(function(){
+    var newJob = new WorkModel();
+    workCollection.add(newJob);
+    var newJobView = new WorkView(newJob);
+    workViews.push(newJobView);
+    $("#work-container").append(newJobView.el);
+    newJobView.edit();
+  })
+
 });
 
 
