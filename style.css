@@ -6,6 +6,14 @@
 	border: 1px solid black;
 }
 
+.card-container {
+	border: 1px solid black;
+}
+
+.card-wrap {
+	border: 1px solid black;
+}
+
 .header-container {
 	height: 350px;
 	background-repeat: no-repeat;

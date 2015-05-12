@@ -20,14 +20,22 @@ var getTemplates = function(){
   var editAddressString = $("#edit-address-template").text();
   templates.editAddressInfo = Handlebars.compile(editAddressString);
 
+  var cardString = $("#card-template").text();
+  templates.cardInfo = Handlebars.compile(cardString);
+
+  var editCardString = $("#edit-card-template").text();
+  templates.editCardInfo = Handlebars.compile(editCardString);
+
 };
 
 $(document).on("ready", function(){
   getTemplates();
+  // Display the header with default data
   var defaultHeader = new Header;
   var defaultHeaderView = new HeaderView(defaultHeader);
   $("#header-container").append(defaultHeaderView.$el);
 
+  // Display two jobs with default data
   var workCollection = new WorkCollection();
   var jobOne = new WorkModel();
   var jobTwo = new WorkModel();
@@ -50,6 +58,7 @@ $(document).on("ready", function(){
     newJobView.edit();
   })
 
+  // Display two addresses with default data
   var addressCollection = new AddressCollection();
   var addressOne = new AddressModel();
   var addressTwo = new AddressModel();
@@ -70,6 +79,29 @@ $(document).on("ready", function(){
     addressViews.push(newAddressView);
     $("#address-container").append(newAddressView.el);
     newAddressView.edit();
+  })
+
+  // Display two credit cards with default data
+  var cardCollection = new CardCollection();
+  var cardOne = new CardModel();
+  var cardTwo = new CardModel();
+  cardCollection.add([cardOne, cardTwo]);
+
+  _.each(cardCollection.models, function(element, index){
+    cardViews.push(new CardView(element));
+  });
+
+  _.each(cardViews, function(element, index){
+    $("#card-container").append(cardViews[index].el);
+  });
+
+  $("#add-card").click(function(){
+    var newCard = new CardModel();
+    cardCollection.add(newCard);
+    var newCardView = new CardView(newCard);
+    cardViews.push(newCardView);
+    $("#card-container").append(newCardView.el);
+    newCardView.edit();
   })
 
 });
