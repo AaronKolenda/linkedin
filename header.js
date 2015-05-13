@@ -1,7 +1,7 @@
 var Header = Backbone.Model.extend({
 
   defaults: {
-  	cover: "https://unsplash.imgix.net/uploads/14126758789351371c7ec/aa322c2d?fit=crop&fm=jpg&h=700&q=75&w=1050;",
+  	cover: "http://hdw.datawallpaper.com/nature/spring-day-wide-wallpaper-497881.jpg",
     avatar: "http://png.findicons.com/files/icons/2198/dark_glass/128/emoticon.png",
     name: "Johnny McJagger",
     bio: "I was born and raised in Arkansas, moved to the Yukon when I was seventeen, and after learning to kill an grizzly bear with my bear hands, decided it was time for a change. I took up computer programming and now I'm here.",

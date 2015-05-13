@@ -30,7 +30,7 @@ var AddressView = Backbone.View.extend({
             "click #save": "save",
             "click #cancel": "render"},
 
-  className: "address-wrap",
+  className: "data-wrap",
 
   initialize: function(model) {
   	this.model = model;

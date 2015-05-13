@@ -29,7 +29,7 @@ var PhoneView = Backbone.View.extend({
             "click #save": "save",
             "click #cancel": "render"},
 
-  className: "phone-wrap",
+  className: "data-wrap",
 
   initialize: function(model) {
   	this.model = model;

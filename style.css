@@ -29,32 +29,12 @@ textarea {
   	resize: none;
 }
 
-.address-container {
-	border: 1px solid black;
-}
-
-.address-wrap {
-	border: 1px solid black;
-}
-
 .avatar {
 	float: left;
 }
 
 .bio {
 	margin-top: 30px;
-}
-
-.card-container {
-	border: 1px solid black;
-}
-
-.card-wrap {
-	border: 1px solid black;
-}
-
-.header {
-	width: 75%;
 }
 
 .header-container {
@@ -74,14 +54,6 @@ textarea {
 	text-align: right;
 }
 
-.phone-container {
-	border: 1px solid black;
-}
-
-.phone-wrap {
-	border: 1px solid black;
-}
-
 .social {
 	display: inline-block;
 	margin-top: 30px;
@@ -93,10 +65,14 @@ textarea {
 	margin-left: auto;
 }
 
-.work-container {
+.data-container {
 	border: 1px solid black;
+	padding: 20px;
 }
 
-.work-wrap {
+.data-wrap {
 	border: 1px solid black;
+	padding: 20px;
+  	border-radius: 5px;
+  	margin: 20px 0px;
 }

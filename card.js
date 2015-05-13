@@ -32,7 +32,7 @@ var CardView = Backbone.View.extend({
             "click #save": "save",
             "click #cancel": "render"},
 
-  className: "card-wrap",
+  className: "data-wrap",
 
   initialize: function(model) {
   	this.model = model;

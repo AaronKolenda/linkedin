@@ -30,7 +30,7 @@ var WorkView = Backbone.View.extend({
             "click #save": "save",
             "click #cancel": "render"},
 
-  className: "work-wrap",
+  className: "data-wrap",
 
   initialize: function(model) {
   	this.model = model;
