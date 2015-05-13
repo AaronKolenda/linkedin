@@ -18,50 +18,50 @@
   <body>
     <div id="header-container" class="header-container">
         <script type="x-handlebars-template" id="header-template">
-       	  	<div class="avatar">
-       	  		<img src={{avatar}}>
-       	  	</div>
-            <div class="name">
-              <p>{{name}}</p>
+            <div class="name-avatar">
+         	  	<img src={{avatar}} class="avatar">
+              <div class="name">
+                {{name}}
+              </div>
             </div>
             <div class="bio">
-              <p>{{bio}}</p>
+                <p>{{bio}}</p>
             </div>
-            <div class="social">
-              <div class="facebook">
-                <p>Facebook: {{facebook}}</p>
+            <div class="social-wrap">
+              <div class="social">
+                Facebook: {{facebook}}
               </div>
-              <div class="twitter">
-                <p>Twitter: {{twitter}}</p>
+              <div class="social">
+                Twitter: {{twitter}}
               </div>
-              <div class="linkedin">
-                <p>Linkedin: {{linkedin}}</p>
+              <div class="social">
+                Linkedin: {{linkedin}}
               </div>
             </div>
             <button class="edit" id="edit">Edit</button>
       </script>
       <script type="x-handlebars-template" id="edit-header-template">
             <div class="cover">
-              <p>Cover Image url: </p><input type="text" value="{{cover}}" id="cover">
+              Cover Image url: <input type="text" value="{{cover}}" id="cover">
             </div>
-            <div class="avatar">
-              <p>Avatar Image url: </p><input type="text" value="{{avatar}}" id="avatar">
+            <div class="edit-avatar">
+              Avatar Image url: <input type="text" value="{{avatar}}" id="avatar">
             </div>
-            <div class="name">
-              <p>Name: </p><input type="text" value="{{name}}" id="name">
+            <div class="edit-name">
+              Name: <input type="text" value="{{name}}" id="name">
             </div>
             <div class="bio">
-              <p>Bio: </p><input type="text" value="{{bio}}" id="bio">
+              Bio: <textarea id="bio" maxlength="500">{{bio}}</textarea>
             </div>
-            <div class="social">
-              <div class="facebook">
-                <p>Facebook: </p><input type="text" value="{{facebook}}" id="facebook">
+            <div class="social-wrap">
+              <div class="social">
+                Facebook: <input type="text" value="{{facebook}}" id="facebook">
               </div>
-              <div class="twitter">
-                <p>Twitter: </p><input type="text" value="{{twitter}}" id="twitter">
+              <div class="social">
+                Twitter: <input type="text" value="{{twitter}}" id="twitter">
               </div>
-              <div class="linkedin">
-                <p>Linkedin: </p><input type="text" value="{{linkedin}}" id="linkedin">
+              <div class="social">
+                Linkedin: <input type="text" value="{{linkedin}}" id="linkedin">
               </div>
             </div>
             <button class="save" id="save">Save</button>
@@ -71,7 +71,7 @@
 
     <div id="work-container" class="work-container">
         <script type="x-handlebars-template" id="work-template">
-            <div class="name">
+            <div class="company-name">
               Company Name: <p>{{name}}</p>
             </div>
             <div class="title">
@@ -92,7 +92,7 @@
       </script>
 
       <script type="x-handlebars-template" id="edit-work-template">
-            <div class="name">
+            <div class="company-name">
               <p>Name of Company: </p><input type="text" value="{{name}}" id="company-name">
             </div>
             <div class="title">
