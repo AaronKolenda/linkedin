@@ -59,6 +59,4 @@ var AddressView = Backbone.View.extend({
     this.render();
   }
 
-
-
 });

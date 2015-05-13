@@ -65,6 +65,4 @@ var CardView = Backbone.View.extend({
     this.render();
   }
 
-
-
 });
